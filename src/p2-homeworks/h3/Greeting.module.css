@@ -1,0 +1,32 @@
+
+
+.buttonAddUser{
+    width: 50px;
+    height: 22px;
+    margin-left: 10px;
+    color: #050505;
+    border-width: 3px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    vertical-align: 2px;
+}
+.counterUser {
+    width: 17px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 2px solid #131212;
+    background: #f6e9a8;
+    display: inline-block;
+    border-radius: 6px;
+    text-align: center;
+    list-style: none;
+}
+.inputClass {
+    background: #fffbf8;
+    border-radius: 20px;
+    margin-left: 11px;
+    vertical-align: 3px;
+}

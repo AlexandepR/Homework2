@@ -1,0 +1,19 @@
+
+.errorInput {
+    margin-top: 7px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.58);
+    display: block;
+}
+
+.error {
+    color: red;
+}
+
+.superInput {
+    margin-top: 10px;
+    background: #efec9a;
+    border-radius: 5px;
+}
+

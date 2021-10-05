@@ -1,0 +1,45 @@
+.message {
+    display: grid;
+    grid-template-areas:
+    "a m";
+    /*grid-template-rows: 100px 20px;*/
+    grid-template-columns: 100px 200px;
+    grid-gap: 4px;
+}
+.avatar img {
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
+    border-radius: 40px;
+    width: 100px;
+    height: 100px;
+}
+
+.avatar {
+grid-area: a;
+}
+
+.name {
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 10px;
+    grid-area: n;
+}
+
+.messageText {
+    margin-left: 5px;
+    border-radius: 20px;
+    background-color: gold;
+    grid-area: m;
+}
+
+
+.time {
+    border-radius: 40px;
+    height: 20px;
+    width: 45px;
+    /*text-align: center;*/
+    margin-top: 7px;
+    margin-left: 150px;
+    grid-area: t;
+    background-color: #ffd700;
+}
+

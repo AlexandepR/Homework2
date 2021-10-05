@@ -1,0 +1,37 @@
+.blue {
+    border-radius: 5px;
+    vertical-align: 3px;
+    border: 2px solid #131212;
+    background: #efec9a;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+    background: #fffbf8;
+}
+
+.testSpanError {
+    color: blue;
+}
+.input {
+    border-radius: 5px;
+    vertical-align: 3px;
+    border: 2px solid #131212;
+    background: #f6efc9;
+}
+
+.buttonDefault{
+    width: 50px;
+    height: 22px;
+    margin-left: 10px;
+    color: #050505;
+    border-width: 3px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    vertical-align: 2px;
+}

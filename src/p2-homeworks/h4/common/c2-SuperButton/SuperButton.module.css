@@ -1,0 +1,32 @@
+@keyframes blink {
+    0% {
+        left: -130%
+    }
+    100% {
+        left: 130%
+    }
+}
+
+
+.default {
+    margin: 2px;
+    color: #050505;
+    border-width: 3px 0;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    outline: none;
+    width: 60px;
+}
+
+.red {
+    margin: 2px;
+    width: 60px;
+    color: #050505;
+    border-width: 3px 0;
+    border-color: #f36464 #000 #ff0000;
+    border-radius: 6px;
+    background: linear-gradient(#e75f5f, #e73636) #ff0000;
+    outline: none;
+}
+
