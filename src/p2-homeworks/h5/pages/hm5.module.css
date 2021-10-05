@@ -1,0 +1,49 @@
+.activeNav {
+    font-weight: bold;
+    text-decoration: none;
+    color: #e5989b;
+}
+.activeNav:hover {
+    color: black
+}
+.navbar {
+    text-decoration: none;
+    margin: 5px;
+}
+.navbar:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.error {
+    width: 1200px;
+    height: 1200px;
+    float: left;
+    background-size: cover;
+    background: url(error.jpg) no-repeat;
+}
+
+.sideBar {
+    display: none;
+}
+
+.headerNavbar {
+display: flex;
+    width: 280px;
+    transition-duration: 1000ms;
+    transform: translate(-200px);
+}
+.headerNavbar:hover {
+    transition-duration: 1000ms;
+    transform: translate(0)
+}
+.button {
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    margin: 2px;
+    width: 75px;
+    height: 25px;
+    background-color: #ffb4a2;
+}
