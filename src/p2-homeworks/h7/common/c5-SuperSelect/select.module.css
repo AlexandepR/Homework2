@@ -1,0 +1,12 @@
+.select {
+    background-color: #f8e9b8;
+    margin-left: 5px;
+    border-radius: 2px;
+    width: 67px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.opinion {
+    background-color: #eee1c1;
+}

@@ -1,5 +1,21 @@
+
+
 .span {
+    display: inline-block;
+    height: 30px;
+    padding-top: 10px;
     font-weight: bold;
-    text-decoration: none;
     color: #ff0000;
+    cursor: pointer;
 }
+
+/*.pencil{*/
+/*    display: block;*/
+/*    max-width:100px;*/
+/*    max-height:100px;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    background-color: red;*/
+/*    background-size: 50px 50px;*/
+/*background: url(https://st.depositphotos.com/3004545/4023/i/450/depositphotos_40239973-stock-photo-sharp-pencil-draw-red-line.jpg);*/
+/*}*/

@@ -51,6 +51,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
     return (
         <>
+            {/*<div className={style.pencil}></div>*/}
             {editMode
                 ? (
                     <SuperInputText
@@ -62,13 +63,15 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     />
                 ) : (
                     <span
+
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
 
                         {...restSpanProps}
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
-                        {children || restProps.value}
+
+                         {children || restProps.value}
                     </span>
                 )
             }

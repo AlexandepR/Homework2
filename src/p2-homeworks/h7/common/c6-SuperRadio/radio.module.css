@@ -1,0 +1,17 @@
+.radio {
+    appearance: none;
+    height: 13px;
+    width: 13px;
+    background-color: #faefd3;
+    font-size: 15px;
+    cursor: pointer;
+}
+.radio:hover {
+    border: 2px solid #ffba00
+}
+.radio:checked {
+    border: 2px solid #3e2f07
+}
+.radio:focus {
+    border: 2px solid #3e2f07
+}
