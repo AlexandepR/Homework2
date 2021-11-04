@@ -18,14 +18,14 @@ function Clock() {
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
     const stringTime = (date) ? [date.getHours(),':',date.getMinutes(),':',(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())] : '' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringDate = (date) ? [date.getFullYear(),'.',date.getMonth(),'.',date.getDate()] : ''
 
     return (
         <div>
