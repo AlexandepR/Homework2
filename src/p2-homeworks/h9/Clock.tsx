@@ -24,8 +24,8 @@ function Clock() {
         setShow(false)
     }
 
-    const stringTime = (date) ? [date.getHours(),':',date.getMinutes(),':',(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())] : '' // fix with date
-    const stringDate = (date) ? [date.getFullYear(),'.',date.getMonth(),'.',date.getDate()] : ''
+    const stringTime = (date) ? [date.getHours(),':',date.getMinutes(),':',(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())] : '' || <br/> // fix with date
+    const stringDate = date?.toLocaleDateString() || <br/>
 
     return (
         <div>
@@ -36,10 +36,12 @@ function Clock() {
                 {stringTime}
             </div>
 
-            {show && (
+            {show ? (
                 <div>
                     {stringDate}
                 </div>
+            ) : (
+                <br/>
             )}
 
             <SuperButton onClick={start}>start</SuperButton>
