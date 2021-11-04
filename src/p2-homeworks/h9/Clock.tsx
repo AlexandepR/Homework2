@@ -7,12 +7,12 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearTimeout(timerId)
     }
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
@@ -24,7 +24,7 @@ function Clock() {
         // close
     }
 
-    const stringTime = 'Time' // fix with date
+    const stringTime = (date) ? [date.getHours(),':',date.getMinutes(),':',(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())] : '' // fix with date
     const stringDate = 'Date' // fix with date
 
     return (
