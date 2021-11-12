@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Homework2/static/css/main.61b154ab.chunk.css",
-    "main.js": "/Homework2/static/js/main.2f4418b4.chunk.js",
-    "main.js.map": "/Homework2/static/js/main.2f4418b4.chunk.js.map",
+    "main.css": "/Homework2/static/css/main.b11f1113.chunk.css",
+    "main.js": "/Homework2/static/js/main.b7d43e50.chunk.js",
+    "main.js.map": "/Homework2/static/js/main.b7d43e50.chunk.js.map",
     "runtime-main.js": "/Homework2/static/js/runtime-main.276e4cfb.js",
     "runtime-main.js.map": "/Homework2/static/js/runtime-main.276e4cfb.js.map",
     "static/js/2.849509f3.chunk.js": "/Homework2/static/js/2.849509f3.chunk.js",
     "static/js/2.849509f3.chunk.js.map": "/Homework2/static/js/2.849509f3.chunk.js.map",
     "index.html": "/Homework2/index.html",
-    "static/css/main.61b154ab.chunk.css.map": "/Homework2/static/css/main.61b154ab.chunk.css.map",
+    "static/css/main.b11f1113.chunk.css.map": "/Homework2/static/css/main.b11f1113.chunk.css.map",
     "static/js/2.849509f3.chunk.js.LICENSE.txt": "/Homework2/static/js/2.849509f3.chunk.js.LICENSE.txt",
     "static/media/hm5.module.css": "/Homework2/static/media/error.40085b38.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.276e4cfb.js",
     "static/js/2.849509f3.chunk.js",
-    "static/css/main.61b154ab.chunk.css",
-    "static/js/main.2f4418b4.chunk.js"
+    "static/css/main.b11f1113.chunk.css",
+    "static/js/main.b7d43e50.chunk.js"
   ]
 }
