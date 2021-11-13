@@ -15,13 +15,19 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperRange
+                    onChangeRange={setValue1}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
+
+
+            <div >
                 <span>{value1}</span>
                 <SuperDoubleRange
+                    setValue1={setValue1}
+                    setValue2={setValue2}
+                    value2={value2}
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>

@@ -23,21 +23,88 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         onChange && onChange(e) // сохраняем старую функциональность
 
         onChangeRange && onChangeRange(+e.currentTarget.value)
+
     }
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
     return (
-        <>
-            <input
-                type={'range'}
-                onChange={onChangeCallback}
-                className={finalRangeClassName}
+        <div className={s.rangeWrap}>
+            <div className={s.rangeSlider}>
+                <div className={s.labelRange}>
+                    <div className={s.minMax}>
+                    <span>0</span>
+                    <span>100</span>
+                    </div>
+                    <input
+                        type={'range'}
+                        // value={parseInt('')}
+                        // value={5}
+                        list='tickmarks'
+                        min='0'
+                        max='100'
+                        onChange={onChangeCallback}
+                        // className={finalRangeClassName}
+                        // className={s.range3}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
-        </>
+                        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                    />
+                </div>
+            </div>
+        </div>
     )
 }
 
 export default SuperRange
+
+
+
+
+
+
+
+
+// import * as React from 'react'
+// import Slider from '@mui/material/Slider';
+// import {makeStyles} from '@material-ui/core';
+//
+//
+// type SuperDoubleRangePropsType = {
+//     value: number
+//     value1: number
+//     setValue: (value: number) => void
+//     setValue1: (value: number) => void
+// }
+//
+// const useStyles = makeStyles({
+//     root: {
+//         width: 300
+//     },
+// });
+//
+//
+// const SuperDoubleRange = (props: SuperDoubleRangePropsType) => {
+//
+//     const handleChange = (event: any, value: number | number[]) => {
+//         if (Array.isArray(value)) {
+//             props.setValue(value[0])
+//             props.setValue1(value[1])
+//         }
+//     }
+//     const classes = useStyles();
+//
+//     return (
+//         <div className={classes.root}>
+//             <Slider
+//                 value={[props.value, props.value1]}
+//                 onChange={handleChange}
+//                 valueLabelDisplay="auto"
+//             />
+//
+//
+//         </div>
+//     )
+// }
+//
+// export default SuperDoubleRange
+
