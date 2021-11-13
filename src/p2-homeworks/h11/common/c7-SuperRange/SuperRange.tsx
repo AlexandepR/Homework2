@@ -6,27 +6,21 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 
 // здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
-type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
-    onChangeRange?: (value: number) => void
+type SuperRangePropsType = {
+    setValue1: (value: any) => void
+    setValue2: (value: any) => void
+    value1?: any
 };
 
-const SuperRange: React.FC<SuperRangePropsType> = (
-    {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
-        onChange, onChangeRange,
-        className,
+const SuperRange = (props:SuperRangePropsType) => {
 
-        ...restProps// все остальные пропсы попадут в объект restProps
-    }
-) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e) // сохраняем старую функциональность
-
-        onChangeRange && onChangeRange(+e.currentTarget.value)
+        props.setValue1(+e.currentTarget.value)
+        props.setValue2(+e.currentTarget.value[0])
 
     }
 
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
+    // const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
     return (
         <div className={s.rangeWrap}>
@@ -38,16 +32,13 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                     </div>
                     <input
                         type={'range'}
-                        // value={parseInt('')}
-                        // value={5}
+                        value={props.value1}
                         list='tickmarks'
                         min='0'
                         max='100'
                         onChange={onChangeCallback}
                         // className={finalRangeClassName}
                         // className={s.range3}
-
-                        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
                 </div>
             </div>

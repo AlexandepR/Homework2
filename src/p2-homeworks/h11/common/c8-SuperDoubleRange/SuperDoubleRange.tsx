@@ -2,47 +2,41 @@ import * as React from 'react'
 import Slider from "@mui/material/Slider";
 import {Box} from "@mui/material";
 import s from "../c7-SuperRange/SuperRange.module.css";
+import {ChangeEvent} from "react";
 
 
 type SuperDoubleRangePropsType = {
-    setValue2: (value: number) => void
-    setValue1: (value: number) => void
-    value2: number
+    setValue2: (value: any) => void
+    setValue1: (value: any) => void
+    // value2: number
+    value2?: any
+    // value1?: any
 }
 
 
-// function valuetext(value: any) {
-//     return `${value}°C`;
-// }
+function valuetext(value: any) {
+    return `${value}°C`;
+}
 
 const minDistance = 10;
 
 const SuperDoubleRange = (props: SuperDoubleRangePropsType) => {
+    // const [value2, setValue2] = React.useState([20, 37]);
+    let value2 = props.value2
+    let setValue2 = props.setValue2
+    // props.setValue1(value2)
 
-
-
-
-
-    const [value, setValue1] = React.useState([20, 37]);
-
-    const handleChange1 = (event: any, newValue: any, activeThumb: any) => {
-
-        if (!Array.isArray(newValue)) {
-            props.setValue1(value[0])
-            return;
-        }
-        if (activeThumb === 0) {
-            setValue1([Math.min(newValue[0], value[1] - minDistance), value[1]]);
-        } else {
-            setValue1([value[0], Math.max(newValue[1], value[0] + minDistance)]);
-        }
-    };
-    //     if (activeThumb === 0) {
-    //         setValue1([Math.min(newValue[0], value[1] - minDistance), value[1]]);
-    //     } else {
-    //         setValue1([value[0], Math.max(newValue[1], value[0] + minDistance)]);
-    //     }
-    // };
+    const handleChange1 = (event: any, newValue: any , activeThumb: any) => {
+            if (!Array.isArray(newValue)) {
+                return;
+            }
+        // props.setValue1(newValue)
+            if (activeThumb === 0) {
+                setValue2([Math.min(newValue[0], value2[1] - minDistance), value2[1]]);
+            } else {
+                setValue2([value2[0], Math.max(newValue[1], value2[0] + minDistance)]);
+            }
+        };
 
 
 // const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
@@ -65,10 +59,10 @@ const SuperDoubleRange = (props: SuperDoubleRangePropsType) => {
                         <Box sx={{width: 250}}>
                             <Slider
                                 getAriaLabel={() => 'Minimum distance'}
-                                value={value}
+                                value={value2}
                                 onChange={handleChange1}
                                 valueLabelDisplay="on"
-                                // getAriaValueText={valuetext}
+                                getAriaValueText={valuetext}
                                 color="secondary"
                                 disableSwap
                             />
