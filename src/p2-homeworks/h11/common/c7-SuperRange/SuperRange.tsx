@@ -10,13 +10,14 @@ type SuperRangePropsType = {
     setValue1: (value: any) => void
     setValue2: (value: any) => void
     value1?: any
+    value2?: any
 };
 
 const SuperRange = (props:SuperRangePropsType) => {
 
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         props.setValue1(+e.currentTarget.value)
-        props.setValue2(+e.currentTarget.value[0])
+        props.setValue2( [+e.currentTarget.value, props.value2[1]] )
 
     }
 
@@ -27,7 +28,7 @@ const SuperRange = (props:SuperRangePropsType) => {
             <div className={s.rangeSlider}>
                 <div className={s.labelRange}>
                     <div className={s.minMax}>
-                    <span>0</span>
+                    <span>{props.value1}</span>
                     <span>100</span>
                     </div>
                     <input
