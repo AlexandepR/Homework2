@@ -15,7 +15,6 @@ function HW12() {
     const onChangeCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(darkThemeAC(e.currentTarget.value))
     }
-
     return (
         <div className={s[theme]}>
             <hr/>
