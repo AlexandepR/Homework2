@@ -13,7 +13,6 @@ export function Request() {
             .then((res) => {
                 setState(res.data.errorText)
             })
-
     }
     return (
         <div>
