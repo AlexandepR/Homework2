@@ -1,13 +1,12 @@
 import React from "react";
-import {Button, checkboxClasses} from "@mui/material";
-import {Request2} from "./Request";
+import {Request} from "./Request";
 
-type requestType = {}
 
-export function HW13(props: requestType) {
+
+export function HW13() {
     return (
         <div>
-            <Request2 />
+            <Request />
         </div>
     )
 }

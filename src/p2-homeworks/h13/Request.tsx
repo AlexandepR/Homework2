@@ -2,17 +2,18 @@ import React, {useEffect, useState} from 'react'
 import {Button} from "@mui/material";
 import axios from "axios";
 
-export function Request2() {
+export function Request() {
     const [checkbox, setCheckbox] = useState<boolean>(false)
     const [state, setState] = useState<any>()
 
     const checkValue = () => {
-    debugger
-            axios.post('https://neko-cafe-back.herokuapp.com/auth/test',  {success: checkbox})
-                .then((res) => {
-                    setState(res.data.errorText)
-                })
-            setCheckbox(!checkbox)
+        setCheckbox(!checkbox)
+        debugger
+        axios.post('https://neko-cafe-back.herokuapp.com/auth/test', {success: !checkbox})
+            .then((res) => {
+                setState(res.data.errorText)
+            })
+
     }
     return (
         <div>
@@ -21,7 +22,7 @@ export function Request2() {
                 size="small"
                 color={'info'}
                 onClick={checkValue}
-            >hi</Button>
+            >Check</Button>
             <input
                 type='checkbox'
                 checked={checkbox}
